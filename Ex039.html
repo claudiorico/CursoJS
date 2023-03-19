@@ -3,7 +3,7 @@
 	<title>N/A</title>
 	<meta charset="iso-8859-1"/>
 	<meta name="author" content="Bernardo Meyer">
-	<meta name="description" content="Gerando uma tabela com informações de um array de elementos JSON">
+	<meta name="description" content="Gerando uma tabela com informaï¿½ï¿½es de um array de elementos JSON">
 	<meta name="keywords" content="sites, web, desenvolvimento, jscript, javascript">
 	<style>
 		BODY {
@@ -63,7 +63,7 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<script>
 		function fillTitle(){
-			// Descrição da página - document.head
+			// Descriï¿½ï¿½o da pï¿½gina - document.head
 			var descri = document.head.querySelector("meta[name=description]");
 			getTag("titulo").innerText = descri.content;
 			// Nome da script - window.location - split
@@ -86,24 +86,24 @@
 			event.stopPropagation();
 			var retang = valor;
 			var aviso = getTag("aviso");
-			aviso.innerText = "Retângulo "+retang;
+			aviso.innerText = "RetÃ¢ngulo "+retang;
 			mostra("quadro");
 			return; 
 			}
 		function clickBody(evt){
-			alert('Você clicou na página do navegador.');
+			alert('VocÃª clicou na pÃ¡gina do navegador.');
 			}
 		function init(){
 			fillTitle();
 			// Vamos abrir este array na console
 			var Livro = [
-				{'Tipo':'Ficção','Titulo': 'Apanhador do Campo de Centeio','Autor':'Ali Savi Mali','Preço':'32.90'},
-				{'Tipo':'Política','Titulo': 'Memórias de Getúlio','Autor':'Sá Silva','Preço':'64.90'},
-				{'Tipo':'Ficção', 'Titulo': 'Reinações de Narizinho','Autor':'Monteiro Lobato','Preço':'44.90'},
-				{'Tipo':'Histórico', 'Titulo': 'Ilíada','Autor':'Homero','Preço':'53.90'},
-				{'Tipo':'Histórico', 'Titulo': 'Eneida','Autor':'Virgílio','Preço':'63.90'},
-				{'Tipo':'Poesia', 'Titulo': 'Decameron','Autor':'Bocaccio','Preço':'73.90'},
-				{'Tipo':'Informática', 'Titulo': 'Programação Java','Autor':'Hermenegildo','Preço':'84.90'}
+				{'Tipo':'Ficï¿½ï¿½o','Titulo': 'Apanhador do Campo de Centeio','Autor':'Ali Savi Mali','Preï¿½o':'32.90'},
+				{'Tipo':'Polï¿½tica','Titulo': 'Memï¿½rias de Getï¿½lio','Autor':'Sï¿½ Silva','Preï¿½o':'64.90'},
+				{'Tipo':'Ficï¿½ï¿½o', 'Titulo': 'Reinaï¿½ï¿½es de Narizinho','Autor':'Monteiro Lobato','Preï¿½o':'44.90'},
+				{'Tipo':'Histï¿½rico', 'Titulo': 'Ilï¿½ada','Autor':'Homero','Preï¿½o':'53.90'},
+				{'Tipo':'Histï¿½rico', 'Titulo': 'Eneida','Autor':'Virgï¿½lio','Preï¿½o':'63.90'},
+				{'Tipo':'Poesia', 'Titulo': 'Decameron','Autor':'Bocaccio','Preï¿½o':'73.90'},
+				{'Tipo':'Informï¿½tica', 'Titulo': 'Programaï¿½ï¿½o Java','Autor':'Hermenegildo','Preï¿½o':'84.90'}
 				]; // Era um array sem Key (Chave)
 			console.log(Livro);
 			var txt = null;
@@ -113,17 +113,17 @@
 			var texto = null;
 			var S = "<table border=1 cellpadding=4 cellspacing=0>";
 			S += "<thead>";
-			// Uso do primeiro livro parta obter cabeçalhos de colunas
+			// Uso do primeiro livro parta obter cabeï¿½alhos de colunas
 			for( item in Livro[0]){
 				console.log(item);
 				S += "<th>"+item+"</th>";
 				}
 			S += "</thead>";
-			// Relação dos livros
+			// Relaï¿½ï¿½o dos livros
 			// Linha ou Registro
 			for( item in Livro){
-				// Item é o índice do Array atributos
-				// Conteúdo é o que este item do Array atributos contém
+				// Item ï¿½ o ï¿½ndice do Array atributos
+				// Conteï¿½do ï¿½ o que este item do Array atributos contï¿½m
 				conteudo = Livro[item];
 				console.log(item+" - "+conteudo);
 				S += "<tr>";
@@ -139,7 +139,7 @@
 			getTag("main").innerHTML = S;
 			// Filtrando o array JSON
 			var ficcao = Livro.filter(function(item){
-				return item.Tipo == "Ficção";
+				return item.Tipo == "Ficï¿½ï¿½o";
 				});
 			console.log(ficcao);
 			}

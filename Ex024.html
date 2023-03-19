@@ -57,30 +57,34 @@
 		function mostra(nomeId){
 			getTag(nomeId).style.display = "block";
 			}
+		function ocultar(nomeId){
+			event.stopPropagation();
+			getTag(nomeId).style.display = "none";
+		}
 		function clicDiv(valor){
 			event.stopPropagation();
 			var retang = valor;
 			var aviso = getTag("aviso");
-			aviso.innerText = "Ret‚ngulo "+retang;
+			aviso.innerText = "Ret√¢ngulo "+retang;
 			mostra("aviso");
 			
 			return; 
 			}
 		function clickBody(evt){
-			alert('VocÍ clicou na p·gina do navegador.');
+			alert('Voc√¥ clicou na p√°gina do navegador.');
 			}
 	</script>
 </head>
 <body onclick="clickBody(event);">
 	<h1>HTML interativo - Manipulando estilos/visibilidade</h1>
 	<div id="main">
-		<div class="retang az" onclick="clicDiv('Azul');">Ret‚ngulo Azul</div>
-		<div class="retang vm" onclick="clicDiv('Vermelho');">Ret‚ngulo Vermelho</div>
-		<div class="retang vd" onclick="clicDiv('Verde');">Ret‚ngulo Verde</div>
+		<div class="retang az" onclick="clicDiv('Azul');">Ret√¢ngulo Azul</div>
+		<div class="retang vm" onclick="clicDiv('Vermelho');">Ret√¢ngulo Vermelho</div>
+		<div class="retang vd" onclick="clicDiv('Verde');">Ret√¢ngulo Verde</div>
 		<img class="" src="EvtBubble.jpg" />
 	</div>
-	<div class="retang anula">DIV externa ‡ #main</div>
-	<div id="aviso">AVISO</div>
+	<div class="retang anula">DIV externa  #main</div>
+	<div id="aviso" onclick="ocultar('aviso')">AVISO</div>
 	
 
 
