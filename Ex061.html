@@ -68,7 +68,7 @@
 	<script>
 		var ESTILOS = "";
 		function fillTitle(){
-			// Descrição da página - document.head
+			// Descriï¿½ï¿½o da pï¿½gina - document.head
 			var descri = document.head.querySelector("meta[name=description]");
 			getTag("titulo").innerText = descri.content;
 			// Nome da script - window.location - split
@@ -91,18 +91,18 @@
 			event.stopPropagation();
 			var retang = valor;
 			var aviso = getTag("aviso");
-			aviso.innerText = "Retângulo "+retang;
+			aviso.innerText = "Retï¿½ngulo "+retang;
 			mostra("quadro");
 			return; 
 			}
 		function clickBody(evt){
-			alert('Você clicou na página do navegador.');
+			alert('Vocï¿½ clicou na pï¿½gina do navegador.');
 			}
 		function getSele(){
 			var el = getTag("area1");
 			var el_ini = el.selectionStart;
 			var el_fim = el.selectionEnd;
-			console.log("selecionou de "+el_ini+" até "+el_fim);
+			console.log("selecionou de "+el_ini+" atï¿½ "+el_fim);
 			el.setSelectionRange(el_ini, el_fim);
 			console.log((el.value).substr(el_ini,el_fim-el_ini));
 			getTag("ini").value = el_ini;
@@ -115,7 +115,7 @@
 			var tam = texto.length;
 			var ini = parseInt(getTag("ini").value);
 			var fim = parseInt(getTag("fim").value);
-			// CORREÇÃO DO FIM, caso o usuário selecione além do fim
+			// CORREï¿½ï¿½O DO FIM, caso o usuï¿½rio selecione alï¿½m do fim
 			if( fim > tam - 1){
 				fim = tam - 1;
 				}
@@ -140,7 +140,7 @@
 			 let sty = document.createElement("style");
 			sty.innerText = ESTILOS;
 			var headIframe = getTag("frame1").contentDocument.head;
-			// Se os estilos não tiverem sido transferidos, injeta no IFRAME
+			// Se os estilos nï¿½o tiverem sido transferidos, injeta no IFRAME
 			if( headIframe.innerText == "" ){
 				headIframe.appendChild(sty);
 				}
@@ -163,14 +163,14 @@
 			// Conteudo
 			frameRefresh(obj);
 			}
-		// CUIDADO: estilo é o formato sem traço ("-")
+		// CUIDADO: estilo ï¿½ o formato sem traï¿½o ("-")
 		// Configura o estilo de uma TAG/Seletor de TAG
 		function setTagStyle(obj, estilo, valor){
 			var cmd = "document.querySelector('"+obj+"').style."+estilo+" = "+valor;
 			eval(cmd);
 			return; 
 			}
-		// Exibe o menu de contexto geral na posição do clique do mouse
+		// Exibe o menu de contexto geral na posiï¿½ï¿½o do clique do mouse
 		function contexto(e){
 			console.log("Contexto");
 			var source = e.target || e.srcElement;
@@ -182,7 +182,7 @@
 			e.stopPropagation();
 			}
 		/*
-			Função executada no ONLOAD da página
+			Funï¿½ï¿½o executada no ONLOAD da pï¿½gina
 		*/
 		function init(){
 			fillTitle();
@@ -217,7 +217,7 @@
 			var texto = getTag("area1").value;
 			var Soma = ( texto.substr(INI,1) == "<" ) + ( texto.substr(FIM,1) == ">" );
 			if( !(Soma == 2 &&  texto.substr(INI+1,1) != "/") ) {
-				alert("Selecione corretamente uma tag, do sinal '<' até o '>' ");
+				alert("Selecione corretamente uma tag, do sinal '<' atï¿½ o '>' ");
 				return;
 				}
 			var texto = getTag("area1").value;
@@ -225,7 +225,7 @@
 			var pTag = texto.substr(INI+1,FIM-INI-1);
 			var arr = pTag.split(" ");
 			pTag = arr[0];
-			// Faz a substituição
+			// Faz a substituiï¿½ï¿½o
 			var newTexto = "";
 			newTexto = newTexto.concat(texto.substr(0,INI));
 			//newTexto = newTexto.concat(texto.substr(INI,FIM-INI-2));
@@ -270,7 +270,7 @@
 			
 			</textarea><br>
 			<div id="painel">
-				<label>Seleção: </label><input id="ini" size=4>&rarr;<input id="fim" size=4>
+				<label>SeleÃ§Ã£o: </label><input id="ini" size=4>&rarr;<input id="fim" size=4>
 				<label>Tamanho:</label><input id="tam" size=4>
 			</div>
 		</div>
@@ -278,7 +278,7 @@
 	</div>
 	<div id="tools">
 		<table>
-			<caption>FUNÇÕES DE ESTILO</caption><br>
+			<caption>FUNÃ‡Ã•ES DE ESTILO</caption><br>
 			<tbody>
 				<tr>
 					<td><label>Alinh.Texto: </label></td>
